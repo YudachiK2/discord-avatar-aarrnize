@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "target": "ES2015",
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "esModuleInterop": true,
+        "lib": [
+            "DOM",
+            "ES2015"
+        ],
+        "strict": true,
+        "strictNullChecks": true,
+        "noImplicitAny": true,
+        "declaration": true,
+        "removeComments": true,
+        "sourceMap": true,
+        "newLine": "lf",
+        "outDir": "dist"
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "target": "ES2015",
+            "module": "CommonJS"
+        }
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
