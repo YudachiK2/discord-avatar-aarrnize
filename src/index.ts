@@ -124,8 +124,7 @@ Promise.all([
                         }
                         resImg.src = cv.toDataURL('image/png')
                     }
-                    console.log(mime)
-                    avatarImg.src = `data:${mime};base64,${imgRes.data}`
+                    avatarImg.src = `data:${mime};base64,${imgRes.data.toString('base64')}`
                 })
                 res.set('Content-Type', 'image/gif')
                 res.send(gifBuf)
