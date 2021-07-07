@@ -6,7 +6,8 @@ const PORT = process.env.PORT || 5000
 const app = express()
 
 app.post('/', (req, res) => {
-    res.json({})
+    res.header('Content-Type', 'application/json; charset=utf-8')
+    res.send({})
 })
 
 const listener = app.listen(PORT, () => console.log(`Your app is listening on port ${PORT}`))
