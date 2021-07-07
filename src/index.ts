@@ -24,7 +24,7 @@ app.post('/', async (req, res) => {
         return
     }
 
-    console.log((await axios({
+    console.log(typeof (await axios({
         url: image,
         method: 'get',
         responseType: 'blob'
