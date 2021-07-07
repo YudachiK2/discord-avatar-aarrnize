@@ -7,6 +7,7 @@ const app = express()
 
 app.get('/', (req, res) => {
     console.log(req.body)
+    res.sendStatus(400)
 })
 
 const listener = app.listen(PORT, () => console.log(`Your app is listening on port ${PORT}`))
