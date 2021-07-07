@@ -31,7 +31,7 @@ app.post('/', async (req, res) => {
             responseType: 'stream'
         })
 
-        console.log(imgRes, fileType.fromBuffer(imgRes.data))
+        console.log(imgRes, fileType.fromStream(imgRes.data))
 
         res.sendStatus(200)
     } catch {
