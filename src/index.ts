@@ -5,7 +5,10 @@ const PORT = process.env.PORT || 3000
 
 const app = express()
 
+app.use(express.urlencoded({ extended: true }))
+
 app.post('/', (req, res) => {
+    console.log(req.headers['content-type'], req.body)
     res.sendStatus(400)
 })
 
