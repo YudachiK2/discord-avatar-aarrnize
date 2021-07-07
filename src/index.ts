@@ -1,6 +1,7 @@
 'use strict'
 import express from 'express'
 import axios from 'axios'
+import fileType from 'file-type'
 
 const PORT = process.env.PORT || 3000
 
@@ -30,7 +31,7 @@ app.post('/', async (req, res) => {
             responseType: 'arraybuffer'
         })
 
-        console.log(imgRes)
+        console.log(imgRes, fileType)
 
         res.sendStatus(200)
     } catch {
