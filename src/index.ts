@@ -34,7 +34,7 @@ Promise.all([
     'DKudT4R.png',
     'OxNZRlD.png',
     '5weN7lB.png'
-].map(v => new Promise((reject, resolve) => {
+].map(v => new Promise((resolve, reject) => {
     axios({
         url: `https://i.imgur.com/${v}`,
         method: 'get',
