@@ -19,12 +19,12 @@ app.post('/', async (req, res) => {
 
     const { image }: { image: string } = req.body
 
-    if (typeof image !== 'string') {
+    if (typeof image !== 'string' || image.length === 0) {
         res.sendStatus(400)
         return
     }
 
-    console.log(image)//, await axios.get(image))
+    console.log(image, await axios.get(image))
 
     res.sendStatus(200)
 })
