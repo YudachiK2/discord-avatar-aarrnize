@@ -130,12 +130,12 @@ Promise.all([
                 res.send(gifBuf)
 
             } catch (e) {
-                console.error(e)
+                console.error('ERROR', e)
                 res.sendStatus(400)
             }
         })
 
-        const listener = app.listen(PORT, () => console.log(`Your app is listening on port ${PORT}`))
+        app.listen(PORT, () => console.log(`Your app is listening on port ${PORT}`))
 
 
     })
