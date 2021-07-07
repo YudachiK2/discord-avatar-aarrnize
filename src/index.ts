@@ -43,7 +43,8 @@ app.post('/', async (req, res) => {
         console.log(await gifExtractFrames('https://i.imgur.com/2T7glHi.gif'))
 
         res.sendStatus(200)
-    } catch {
+    } catch (e) {
+        console.error(e)
         res.sendStatus(400)
     }
 })
