@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000
 const app = express()
 
 app.post('/', (req, res) => {
-    console.log(req)
+    console.log(req.headers)
     res.sendStatus(400)
 })
 
