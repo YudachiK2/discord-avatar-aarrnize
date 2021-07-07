@@ -2,7 +2,7 @@ name: Deploy To Glitch
 on:
   push:
     branches:
-      - master
+      - main
     workflow_dispatch:
 jobs:
   deploy:
