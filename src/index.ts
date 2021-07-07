@@ -3,6 +3,8 @@ import express from 'express'
 import axios from 'axios'
 import fileType from 'file-type'
 
+const gifExtractFrames = require('gif-extract-frames')
+
 const PORT = process.env.PORT || 3000
 
 const app = express()
@@ -31,7 +33,14 @@ app.post('/', async (req, res) => {
             responseType: 'stream'
         })
 
-        console.log(imgRes, await fileType.fromStream(imgRes.data))
+        const { mime } = await fileType.fromStream(imgRes.data) || {}
+
+        if (typeof mime !== 'string' || mime.split('/')[0] !== 'image') {
+            res.sendStatus(400)
+            return
+        }
+
+        console.log(await gifExtractFrames('https://i.imgur.com/2T7glHi.gif'))
 
         res.sendStatus(200)
     } catch {
