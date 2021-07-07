@@ -139,4 +139,4 @@ Promise.all([
 
 
     })
-    .catch(e => console.error(e))
+    .catch(e => console.error('FOR', e))
