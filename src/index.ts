@@ -24,11 +24,11 @@ app.post('/', async (req, res) => {
         return
     }
 
-    console.log(await axios({
+    console.log((await axios({
         url: image,
         method: 'get',
         responseType: 'blob'
-    }))
+    })).data)
 
     res.sendStatus(200)
 })
