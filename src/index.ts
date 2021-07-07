@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000
 
 const app = express()
 
-app.get('/', (req, res) => {
+app.post('/', (req, res) => {
     console.log(req)
     res.sendStatus(400)
 })
