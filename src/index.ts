@@ -8,6 +8,7 @@ const app = express()
 
 app.use(express.json())
 
+app.post('/', (req, res) => void res.sendStatus(405))
 app.post('/', async (req, res) => {
     const type = req.headers['content-type']
 
