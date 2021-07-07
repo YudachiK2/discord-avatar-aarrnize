@@ -28,10 +28,10 @@ app.post('/', async (req, res) => {
         const imgRes = await axios({
             url: image,
             method: 'get',
-            responseType: 'arraybuffer'
+            responseType: 'stream'
         })
 
-        console.log(imgRes, fileType)
+        console.log(imgRes, fileType.fromBuffer(imgRes.data))
 
         res.sendStatus(200)
     } catch {
