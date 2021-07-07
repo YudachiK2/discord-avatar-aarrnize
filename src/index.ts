@@ -7,6 +7,7 @@ const app = express()
 
 app.get('/', (req, res) => {
     res.header('Content-Type', 'application/json; charset=utf-8')
+    res.sendStatus(400)
     res.send({})
 })
 
