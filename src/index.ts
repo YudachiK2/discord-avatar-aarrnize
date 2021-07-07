@@ -1,4 +1,4 @@
 'use strict'
 import express from 'express'
 
-//console.log('Hello, World!')
+console.log('Hello, World!')
