@@ -17,7 +17,7 @@ app.post('/', async (req, res) => {
         return
     }
 
-    const [image]: [string] = req.body
+    const { image }: { image: string } = req.body
 
     if (typeof image !== 'string') {
         res.sendStatus(400)
