@@ -24,7 +24,7 @@ app.post('/', async (req, res) => {
         return
     }
 
-    console.log('Hello, Data!', await axios.get(image))
+    console.log(image, await axios.get(image))
 
     res.sendStatus(200)
 })
