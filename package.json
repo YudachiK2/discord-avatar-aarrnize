@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run build && npm run serve",
     "build": "tsc",
-    "serve": "node --require dotenv/config dist/index.js"
+    "serve": "node dist/index.js"
   },
   "repository": {
     "type": "git",
