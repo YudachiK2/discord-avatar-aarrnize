@@ -6,8 +6,12 @@ const PORT = process.env.PORT || 3000
 const app = express()
 
 app.post('/', (req, res) => {
-    console.log(req.headers)
-    res.sendStatus(400)
+    if (req.headers['content-type'] === 'application/json') {
+        console.log(req.body)
+        res.sendStatus(200)
+    } else {
+        res.sendStatus(400)
+    }
 })
 
 const listener = app.listen(PORT, () => console.log(`Your app is listening on port ${PORT}`))
