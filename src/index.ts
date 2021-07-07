@@ -27,7 +27,7 @@ app.post('/', async (req, res) => {
     console.log(typeof (await axios({
         url: image,
         method: 'get',
-        responseType: 'blob'
+        responseType: 'arraybuffer'
     })).data)
 
     res.sendStatus(200)
